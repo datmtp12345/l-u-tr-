@@ -179,7 +179,9 @@ window.resetAttendance = function () {
   localStorage.removeItem("attendanceHistory");
   renderMembers();
 };
-
+if (!localStorage.getItem("loggedIn")) {
+  window.location.href = "index.html";
+}
 // mớimới
 // Ghi lên Firebase
 // Lắng nghe thay đổi
